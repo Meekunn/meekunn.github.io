@@ -1,0 +1,35 @@
+.loader-container .letter {
+	margin-right: 2px;
+	-webkit-text-stroke: 3px #fff;
+}
+
+.loader-container .letter:nth-child(1) {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 50px;
+}
+
+.loader-container .letter:nth-child(2) {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 50px;
+}
+
+.loader-container .letter:nth-child(3) {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 50px;
+}
+
+.loader-container .letter:nth-child(4) {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 50px;
+}
+
+.loader-container .letter:nth-child(5) {
+	stroke-dasharray: 500;
+	stroke-dashoffset: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.loader-container .letter {
+		-webkit-text-stroke: 5px #fff;
+	}
+}

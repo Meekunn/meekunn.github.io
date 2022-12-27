@@ -1,8 +1,10 @@
 import Head from "next/head";
-import { Text } from "@chakra-ui/react";
+import { Box, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
+import Loader from "../components/Loader";
 
 export default function Home() {
+	// const { colorMode, toggleColorMode} = useColorMode();
 	return (
 		<>
 			<Head>
@@ -11,8 +13,11 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Navbar />
-			<Text>Work In progress</Text>
+			<Box bg={useColorModeValue("white", "black")} height={"100vh"}>
+				{/* <Loader /> */}
+				<Navbar />
+				<Loader />
+			</Box>
 		</>
 	);
 }
