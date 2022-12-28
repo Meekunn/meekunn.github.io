@@ -5,12 +5,11 @@ import NextLink from "next/link";
 const DesktopNav = () => {
 	const { colorMode } = useColorMode();
 	const linkColor = useColorModeValue("black", "gray.200");
-	// const linkHoverColor = useColorModeValue("gray.800", "white");
 
 	return (
 		<Stack direction={"row"} spacing={8}>
 			{navItems.map((navItem) => (
-				<Box key={navItem.label}>
+				<Box key={navItem.label} display="flex">
 					<Link
 						as={NextLink}
 						p={2}

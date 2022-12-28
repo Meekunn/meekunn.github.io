@@ -48,7 +48,7 @@ const Navbar = () => {
 					<Flex
 						display={{ base: "none", md: "flex" }}
 						align="center"
-						gap={{ md: 4, lg: 6 }}
+						gap={{ md: 2, lg: 4, xl: 6 }}
 						ml={10}
 					>
 						<DesktopNav />
