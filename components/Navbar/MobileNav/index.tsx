@@ -9,6 +9,7 @@ const MobileNav = () => {
 			p={4}
 			display={{ base: "flex", md: "none" }}
 			justifyContent="center"
+			boxShadow="rgb(253 254 255 / 79%) -2px 5px 7px"
 			h="100%"
 		>
 			<Stack bg={"transparent"} h="80%" gap={10}>

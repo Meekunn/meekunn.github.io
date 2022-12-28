@@ -23,7 +23,7 @@ const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const { isOpen, onToggle } = useDisclosure();
 	return (
-		<Box bg={useColorModeValue("white", "black")} position="fixed" w="100%">
+		<Box bg={useColorModeValue("white", "black")} position="fixed" w="100%" zIndex={"2000"}>
 			<Flex
 				bg={useColorModeValue("white", "black")}
 				color={useColorModeValue("black", "white")}

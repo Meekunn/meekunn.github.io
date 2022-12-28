@@ -10,6 +10,11 @@ const navItems: NavItems[] = [
 		href: "#about",
 	},
 	{
+		emoji: "🎨",
+		label: "Skills",
+		href: "#skills",
+	},
+	{
 		emoji: "🚧",
 		label: "Projects",
 		href: "#project",
