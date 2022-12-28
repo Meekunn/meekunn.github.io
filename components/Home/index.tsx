@@ -3,6 +3,8 @@ import Typewriter from "typewriter-effect";
 import BouncyTextAnim from "../BouncyTextAnimation";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import Image from "next/image";
+import homeDoddle from "../../assets/Code-typing-cuate.png";
 
 const HomeSection = () => {
 	const bgColor = useColorModeValue("white", "black");
@@ -14,8 +16,8 @@ const HomeSection = () => {
 	const isInView = useInView(ref, { once: false });
 	return (
 		<Box bg={bgColor} top={16} position="relative">
-			<Flex direction={"row"} px={6} py={8}>
-				<Flex direction={"column"}>
+			<Flex direction={{ base: "column", md: "row" }} px={6} py={8} gap={4}>
+				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
 					<Text
 						className="html-tags"
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
@@ -121,6 +123,23 @@ const HomeSection = () => {
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
 						&lt;&#47;span&gt;
+					</Text>
+				</Flex>
+				<Flex direction={"column"} w={{ md: "50%" }}>
+					<Text
+						className="html-tags"
+						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
+						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
+					>
+						&lt;div class=&quot;img-container&quot;&gt;
+					</Text>
+					<Image src={homeDoddle} alt="Code-typing-cuate" priority />
+					<Text
+						className="html-tags"
+						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
+						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
+					>
+						&lt;&#47;div&gt;
 					</Text>
 				</Flex>
 			</Flex>
