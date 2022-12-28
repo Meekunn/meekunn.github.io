@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { Montserrat } from "@next/font/google";
 import "@fontsource/montserrat";
 import "@fontsource/lobster-two";
+import "@fontsource/tangerine";
+import "@fontsource/rubik-moonrocks";
 import theme from "../theme";
 import "../components/Loader/loader.scss";
 import "../styles/style.scss";

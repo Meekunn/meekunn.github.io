@@ -1,13 +1,8 @@
 import { motion, useAnimationControls } from "framer-motion";
-import { useState, CSSProperties } from "react";
+import { useState } from "react";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 
-interface IBouncyTextAnim {
-	children: string;
-	style: CSSProperties;
-}
-
-const BouncyTextAnim = ({ children, style }: IBouncyTextAnim) => {
+const BouncyTextAnim = ({ children }: IBouncyTextAnim) => {
 	const [isBouncing, setIsBouncing] = useState(false);
 	const controls = useAnimationControls();
 	const bouncy_effect = () => {
@@ -32,7 +27,6 @@ const BouncyTextAnim = ({ children, style }: IBouncyTextAnim) => {
 		<Box
 			as={motion.span}
 			animate={controls}
-			style={style}
 			onMouseOver={() => {
 				if (!isBouncing) bouncy_effect();
 			}}

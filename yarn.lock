@@ -962,6 +962,16 @@
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.13.tgz#58f12419c05e131b09ab17e9181aa24fb9c84b3a"
   integrity sha512-/XlcNsMFjdWX4Away8Ax/4NgND8Ckk9gVDwgz1sfxF6h+gFHChLOV0IvPrUfCQjZ1F35igg+nR9bSxmjsYEskQ==
 
+"@fontsource/rubik-moonrocks@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/rubik-moonrocks/-/rubik-moonrocks-4.5.4.tgz#7379289bac28590949fdf981aced8784624679d2"
+  integrity sha512-LxsS5cIZqaNcRydT0V56GiKIRU140fcrDCVObmShiNje6ejl+QJBMeBBk2Xh0+P1MPGWOq94pAqfmtNRp/BzNg==
+
+"@fontsource/tangerine@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/tangerine/-/tangerine-4.5.9.tgz#5fe9120cccf6b7d3737978ac907f85cae0542356"
+  integrity sha512-lKpSUdMXfMKtIyU7AJKLFftV7A5bOw1F5bMVHpqf+FnDQFY2q+yt8+YS+eVWCCtL/aB8XHWsSDEzdNCU1G6EUQ==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"

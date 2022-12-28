@@ -17,39 +17,42 @@ const HomeSection = () => {
 			<Flex direction={"row"} px={6} py={8}>
 				<Flex direction={"column"}>
 					<Text
-						fontFamily="'Tangerine', cursive !important"
+						className="html-tags"
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
 						&lt;h1&gt;
 					</Text>
-					<Heading ref={ref} as="h1" pl={2} mb={1}>
+					<Heading
+						ref={ref}
+						as="h1"
+						pl={2}
+						mb={1}
+						style={{
+							transform: isInView ? "none" : "translateX(-200px)",
+							opacity: isInView ? 1 : 0,
+							filter: isInView ? "blur(0)" : "blur(5px)",
+							transition: "all 1.5s 0.5s",
+						}}
+					>
 						{intro_line1.map((letter, index) => (
-							<BouncyTextAnim
-								key={index}
-								style={{
-									transform: isInView ? "none" : "translateX(-200px)",
-									opacity: isInView ? 1 : 0,
-									filter: isInView ? "blur(0)" : "blur(5px)",
-									transition: "all 1.5s 0.5s",
-								}}
-							>
-								{letter === " " ? "\u00A0" : letter}
-							</BouncyTextAnim>
+							<BouncyTextAnim key={index}>{letter === " " ? "\u00A0" : letter}</BouncyTextAnim>
 						))}
 					</Heading>
-					<Heading ref={ref2} as="h1" pl={2} mb={1}>
+					<Heading
+						ref={ref2}
+						as="h1"
+						pl={2}
+						mb={1}
+						style={{
+							transform: isInView ? "none" : "translateX(-200px)",
+							opacity: isInView ? 1 : 0,
+							filter: isInView ? "blur(0)" : "blur(5px)",
+							transition: "all 1.5s 0.5s",
+						}}
+					>
 						{intro_line2.map((letter, index) => (
-							<BouncyTextAnim
-								key={index}
-								style={{
-									transform: isInView ? "none" : "translateX(-200px)",
-									opacity: isInView ? 1 : 0,
-									transition: "all 1.5s 0.5s",
-								}}
-							>
-								{letter === " " ? "\u00A0" : letter}
-							</BouncyTextAnim>
+							<BouncyTextAnim key={index}>{letter === " " ? "\u00A0" : letter}</BouncyTextAnim>
 						))}
 						<Box
 							ref={ref}
@@ -65,29 +68,30 @@ const HomeSection = () => {
 							Ayomikun,
 						</Box>
 					</Heading>
-					<Heading ref={ref} as="h1" pl={2} mb={1}>
+					<Heading
+						ref={ref}
+						as="h1"
+						pl={2}
+						mb={1}
+						style={{
+							transform: isInView ? "none" : "translateX(-200px)",
+							opacity: isInView ? 1 : 0,
+							transition: "all 1.5s 0.5s",
+						}}
+					>
 						{intro_line3.map((letter, index) => (
-							<BouncyTextAnim
-								key={index}
-								style={{
-									transform: isInView ? "none" : "translateX(-200px)",
-									opacity: isInView ? 1 : 0,
-									transition: "all 1.5s 0.5s",
-								}}
-							>
-								{letter === " " ? "\u00A0" : letter}
-							</BouncyTextAnim>
+							<BouncyTextAnim key={index}>{letter === " " ? "\u00A0" : letter}</BouncyTextAnim>
 						))}
 					</Heading>
 					<Text
-						fontFamily="'Tangerine', cursive !important"
+						className="html-tags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
 						&lt;&#47;h1&gt;
 					</Text>
 					<Text
-						fontFamily="'Tangerine', cursive !important"
+						className="html-tags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
@@ -112,7 +116,7 @@ const HomeSection = () => {
 						/>
 					</Box>
 					<Text
-						fontFamily="'Tangerine', cursive !important"
+						className="html-tags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
