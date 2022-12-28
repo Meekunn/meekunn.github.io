@@ -5,7 +5,7 @@ import navItems from "../navitems";
 const MobileNav = () => {
 	return (
 		<Stack
-			bg={useColorModeValue("whiteAlpha.900", "blackAlpha.600")}
+			bg={useColorModeValue("whiteAlpha.900", "blackAlpha.900")}
 			p={4}
 			display={{ base: "flex", md: "none" }}
 			justifyContent="center"
