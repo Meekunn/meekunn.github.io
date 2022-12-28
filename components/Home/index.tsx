@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import BouncyTextAnim from "../BouncyTextAnimation";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import homeDoddle from "../../assets/Code-typing-cuate.png";
 
@@ -13,10 +13,11 @@ const HomeSection = () => {
 	const intro_line3 = "a front-end developer.".split("");
 	const ref = useRef(null);
 	const ref2 = useRef(null);
+	const refImage = useRef(null);
 	const isInView = useInView(ref, { once: false });
 	return (
 		<Box bg={bgColor} top={16} position="relative">
-			<Flex direction={{ base: "column", md: "row" }} px={6} py={8} gap={4}>
+			<Flex direction={{ base: "column", md: "row" }} px={{ base: 6, lg: 10 }} py={8} gap={4}>
 				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
 					<Text
 						className="html-tags"
@@ -133,7 +134,18 @@ const HomeSection = () => {
 					>
 						&lt;div class=&quot;img-container&quot;&gt;
 					</Text>
-					<Image src={homeDoddle} alt="Code-typing-cuate" priority />
+					<Box
+						w={"100%"}
+						as={motion.div}
+						ref={refImage}
+						style={{
+							transform: isInView ? "none" : "translateX(400px)",
+							opacity: isInView ? 1 : 0,
+							transition: "all 1.5s 0.5s",
+						}}
+					>
+						<Image src={homeDoddle} alt="Code-typing-cuate" priority className="home-img" />
+					</Box>
 					<Text
 						className="html-tags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}

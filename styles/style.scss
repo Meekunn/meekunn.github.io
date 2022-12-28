@@ -129,6 +129,19 @@
 	color: #cc2ed1;
 }
 
+.home-img {
+	animation: home-img-anim infinite alternate 2s 1.5s;
+}
+
+@keyframes home-img-anim {
+	from {
+		transform: translate3d(0, 20px, 0);
+	}
+	to {
+		transform: translate3d(0, -15px, 0);
+	}
+}
+
 @keyframes desktop_link_gradient {
 	to {
 		background-position: 400% center;
