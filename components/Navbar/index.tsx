@@ -2,7 +2,6 @@ import { BsMoonStarsFill } from "react-icons/bs";
 import { BiSun } from "react-icons/bi";
 import { IoApps } from "react-icons/io5";
 import { FaTimes } from "react-icons/fa";
-import { Rubik_Moonrocks } from "@next/font/google";
 import {
 	Box,
 	Flex,
@@ -16,8 +15,6 @@ import {
 import MobileNav from "./MobileNav";
 import { slideStyle } from "./style";
 import DesktopNav from "./DesktopNav";
-
-const moonrocks = Rubik_Moonrocks({ weight: "400", subsets: ["latin"] });
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -39,7 +36,7 @@ const Navbar = () => {
 					align="center"
 				>
 					<Text
-						className={moonrocks.className}
+						fontFamily="'Rubik Moonrocks', cursive !important"
 						textAlign={"left"}
 						color={useColorModeValue("black", "white")}
 						fontSize={{ base: "2xl", md: "3xl" }}
