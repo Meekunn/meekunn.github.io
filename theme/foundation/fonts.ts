@@ -1,6 +1,6 @@
 /* eslint-disable quotes */
 const fonts = {
-	heading: `"Montserrat", sans-serif`,
+	heading: `"Lobster Two", cursive`,
 	body: `"Montserrat", sans-serif`,
 };
 

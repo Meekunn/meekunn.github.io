@@ -12,6 +12,7 @@
 		"@chakra-ui/react": "^2.4.4",
 		"@emotion/react": "^11",
 		"@emotion/styled": "^11",
+		"@fontsource/lobster-two": "^4.5.10",
 		"@fontsource/montserrat": "^4.5.13",
 		"@next/font": "13.0.7",
 		"@types/node": "18.11.17",

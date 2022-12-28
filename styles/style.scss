@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Rubik+Moonrocks&family=Tangerine:wght@700&family=Ubuntu:wght@700&display=swap");
+
 .desktop-nav {
 	position: relative;
 }
@@ -70,6 +72,30 @@
 	color: #1a202c;
 }
 
+.my_name {
+	font-family: "Lobster Two", cursive !important;
+	font-weight: 700;
+	color: transparent;
+	background: linear-gradient(90deg, #e73c7e, #23a6d5, rgb(221, 155, 80), #cb7ceb) 0 0 / 400% auto;
+	animation: 8s text_gradient infinite linear;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.bouncy_anim {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bouncy_anim:hover {
+	color: #cc2ed1;
+	transition: all 0.2s ease-in-out;
+}
+
 .desktop-navlink-light::after {
 	content: "";
 	position: absolute;
@@ -87,6 +113,16 @@
 	color: #1a202c;
 	transform-origin: bottom left;
 	transform: scaleX(1);
+}
+
+.typewriter {
+	padding-bottom: 0.25rem;
+	font-weight: 700;
+	border-bottom: 1.5px solid #cc2ed1;
+}
+
+.cursor-typewriter {
+	color: #cc2ed1;
 }
 
 @keyframes desktop_link_gradient {

@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Box, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
-import Loader from "../components/Loader";
+import HomeSection from "../components/Home";
 
 export default function Home() {
 	// const { colorMode, toggleColorMode} = useColorMode();
@@ -16,7 +16,7 @@ export default function Home() {
 			<Box bg={useColorModeValue("white", "black")} height={"100vh"}>
 				{/* <Loader /> */}
 				<Navbar />
-				<Loader />
+				<HomeSection />
 			</Box>
 		</>
 	);
