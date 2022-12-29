@@ -36,8 +36,7 @@ const Navbar = () => {
 					align="center"
 				>
 					<Text
-						style={{ fontFamily: "'Rubik Moonrocks', cursive !important" }}
-						textAlign={"left"}
+						variant="myNameLogo"
 						color={useColorModeValue("black", "white")}
 						fontSize={{ base: "2xl", md: "3xl" }}
 						cursor="pointer"

@@ -16,11 +16,18 @@ const HomeSection = () => {
 	const refImage = useRef(null);
 	const isInView = useInView(ref, { once: false });
 	return (
-		<Box bg={bgColor} top={16} position="relative">
+		<Box
+			bg={bgColor}
+			top={{ base: 8, sm: 0 }}
+			position="relative"
+			display="flex"
+			alignItems={"center"}
+			h="100vh"
+		>
 			<Flex direction={{ base: "column", md: "row" }} px={{ base: 6, lg: 10 }} py={8} gap={4}>
 				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
 					<Text
-						className="html-tags"
+						variant="htmlTags"
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -87,14 +94,14 @@ const HomeSection = () => {
 						))}
 					</Heading>
 					<Text
-						className="html-tags"
+						variant="htmlTags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
 						&lt;&#47;h1&gt;
 					</Text>
 					<Text
-						className="html-tags"
+						variant="htmlTags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
@@ -119,7 +126,7 @@ const HomeSection = () => {
 						/>
 					</Box>
 					<Text
-						className="html-tags"
+						variant="htmlTags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
@@ -128,7 +135,7 @@ const HomeSection = () => {
 				</Flex>
 				<Flex direction={"column"} w={{ md: "50%" }}>
 					<Text
-						className="html-tags"
+						variant="htmlTags"
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -147,7 +154,7 @@ const HomeSection = () => {
 						<Image src={homeDoddle} alt="Code-typing-cuate" priority className="home-img" />
 					</Box>
 					<Text
-						className="html-tags"
+						variant="htmlTags"
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>

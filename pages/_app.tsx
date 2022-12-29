@@ -1,25 +1,17 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
-import { Montserrat } from "@next/font/google";
 import "@fontsource/montserrat";
 import "@fontsource/lobster-two";
-import "@fontsource/tangerine";
-import "@fontsource/rubik-moonrocks";
+import "@fontsource/tangerine/400.css";
+import "@fontsource/rubik-moonrocks/400.css";
 import theme from "../theme";
 import "../components/Loader/loader.scss";
 import "../styles/style.scss";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 function App({ Component, pageProps }: AppProps) {
 	return (
 		<ChakraProvider theme={theme}>
 			<>
-				<style jsx global>{`
-					html {
-						font-family: ${montserrat.style.fontFamily};
-					}
-				`}</style>
 				<Component {...pageProps} />
 			</>
 		</ChakraProvider>
