@@ -85,7 +85,8 @@
 	cursor: pointer;
 }
 
-.bouncy_anim {
+.bouncy_anim,
+.section-heading {
 	display: inline-block;
 	cursor: pointer;
 }
@@ -93,6 +94,17 @@
 .bouncy_anim:hover {
 	color: #cc2ed1;
 	transition: all 0.2s ease-in-out;
+}
+
+.section-heading {
+	color: transparent;
+	background: linear-gradient(180deg, #e73c7e, #23a6d5, rgb(221, 155, 80), #cb7ceb);
+	animation: 8s text_gradient infinite linear;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 1px;
 }
 
 .desktop-navlink-light::after {
@@ -126,6 +138,26 @@
 
 .home-img {
 	animation: home-img-anim infinite alternate 2s 1.5s;
+}
+
+.about-img {
+	transition: all 0.5s ease;
+}
+
+.about-img:hover {
+	transform: scaleX(-1);
+}
+
+@keyframes section-heading-anim {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
 }
 
 @keyframes home-img-anim {

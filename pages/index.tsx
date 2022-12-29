@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import HomeSection from "../components/Home";
+import About from "../components/About";
 
 export default function Home() {
 	// const { colorMode, toggleColorMode} = useColorMode();
@@ -17,6 +18,7 @@ export default function Home() {
 				{/* <Loader /> */}
 				<Navbar />
 				<HomeSection />
+				<About />
 			</Box>
 		</>
 	);

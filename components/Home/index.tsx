@@ -17,12 +17,17 @@ const HomeSection = () => {
 	const isInView = useInView(ref, { once: false });
 	return (
 		<Box
+			id="home"
 			bg={bgColor}
-			top={{ base: 8, sm: 0 }}
+			pt={{ base: 8, sm: 4, md: 8 }}
+			pb={2}
 			position="relative"
 			display="flex"
 			alignItems={"center"}
 			h="100vh"
+			borderBottom={"1px"}
+			borderStyle="dashed"
+			borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 		>
 			<Flex direction={{ base: "column", md: "row" }} px={{ base: 6, lg: 10 }} py={8} gap={4}>
 				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
@@ -46,7 +51,9 @@ const HomeSection = () => {
 						}}
 					>
 						{intro_line1.map((letter, index) => (
-							<BouncyTextAnim key={index}>{letter === " " ? "\u00A0" : letter}</BouncyTextAnim>
+							<BouncyTextAnim key={index} className="bouncy_anim">
+								{letter === " " ? "\u00A0" : letter}
+							</BouncyTextAnim>
 						))}
 					</Heading>
 					<Heading
@@ -62,7 +69,9 @@ const HomeSection = () => {
 						}}
 					>
 						{intro_line2.map((letter, index) => (
-							<BouncyTextAnim key={index}>{letter === " " ? "\u00A0" : letter}</BouncyTextAnim>
+							<BouncyTextAnim key={index} className="bouncy_anim">
+								{letter === " " ? "\u00A0" : letter}
+							</BouncyTextAnim>
 						))}
 						<Box
 							ref={ref}
@@ -90,7 +99,9 @@ const HomeSection = () => {
 						}}
 					>
 						{intro_line3.map((letter, index) => (
-							<BouncyTextAnim key={index}>{letter === " " ? "\u00A0" : letter}</BouncyTextAnim>
+							<BouncyTextAnim key={index} className="bouncy_anim">
+								{letter === " " ? "\u00A0" : letter}
+							</BouncyTextAnim>
 						))}
 					</Heading>
 					<Text
@@ -146,7 +157,6 @@ const HomeSection = () => {
 						as={motion.div}
 						ref={refImage}
 						style={{
-							transform: isInView ? "none" : "translateX(400px)",
 							opacity: isInView ? 1 : 0,
 							transition: "all 1.5s 0.5s",
 						}}

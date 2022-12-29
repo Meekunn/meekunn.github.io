@@ -9,7 +9,3 @@ interface EmojiType {
 	symbol: any;
 	label: string;
 }
-
-interface IBouncyTextAnim {
-	children: string;
-}

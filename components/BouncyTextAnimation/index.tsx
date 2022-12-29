@@ -2,7 +2,12 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useState } from "react";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 
-const BouncyTextAnim = ({ children }: IBouncyTextAnim) => {
+interface IBouncyTextAnim {
+	children: string;
+	className?: string;
+}
+
+const BouncyTextAnim = ({ children, className }: IBouncyTextAnim) => {
 	const [isBouncing, setIsBouncing] = useState(false);
 	const controls = useAnimationControls();
 	const bouncy_effect = () => {
@@ -17,7 +22,7 @@ const BouncyTextAnim = ({ children }: IBouncyTextAnim) => {
 			],
 			transition: {
 				times: [0, 0.5, 0.6, 0.7, 0.8, 0.5],
-				duration: 0.3,
+				duration: 0.5,
 			},
 		});
 		setIsBouncing(true);
@@ -31,7 +36,7 @@ const BouncyTextAnim = ({ children }: IBouncyTextAnim) => {
 				if (!isBouncing) bouncy_effect();
 			}}
 			onAnimationComplete={() => setIsBouncing(false)}
-			className="bouncy_anim"
+			className={className}
 			fontSize={{ base: "2rem", sm: "4xl", md: "2.7rem", lg: "5xl" }}
 			color={useColorModeValue("blackAlpha.800", "white")}
 		>
