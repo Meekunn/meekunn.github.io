@@ -1,36 +1,70 @@
-import { Box, Container, Text } from "@chakra-ui/react";
-import { Poppins } from "@next/font/google";
-
-const poppins = Poppins({ weight: "700", subsets: ["latin"] });
+import { Box, useColorModeValue } from "@chakra-ui/react";
+import { useEffect } from "react";
 
 const Loader = () => {
-	const word: string[] = ["M", "i", "k", "u", "n"];
-
-	// const logo = document.querySelectorAll(".letter");
-	// for (let i = 0; i < logo.length; i++) {
-	// 	console.log(`${i} is ${logo[i].getTotalLength()}`)
-	// }
+	useEffect(() => {
+		const loader: NodeListOf<SVGGeometryElement> = document.querySelectorAll("#loader path");
+		for (let i = 0; i < loader.length; i++) {
+			console.log(`${i} is ${loader[i].getTotalLength()}`);
+		}
+	}, []);
 
 	return (
 		<Box
-			className={poppins.className}
 			display="flex"
 			alignItems={"center"}
 			height="100%"
-			bg={"black"}
+			bg={useColorModeValue("white", "black")}
 		>
-			<Container className="loader-container" display={"flex"} justifyContent="center">
-				{word.map((letter, index) => (
-					<Text
-						key={index}
-						className="letter"
-						color={"transparent"}
-						fontSize={{ base: "6xl", lg: "9xl" }}
-					>
-						{letter}
-					</Text>
-				))}
-			</Container>
+			<svg
+				id="loader"
+				width="681"
+				height="90"
+				viewBox="0 0 681 90"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M60.876 73.624H28.388L23.18 89H0.984009L32.48 1.952H57.032L88.528 89H66.084L60.876 73.624ZM55.42 57.256L44.632 25.388L33.968 57.256H55.42Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M172.762 1.952L142.63 60.232V89H121.426V60.232L91.2938 1.952H115.35L132.214 38.408L148.954 1.952H172.762Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M222.473 89.868C214.289 89.868 206.767 87.9667 199.905 84.164C193.127 80.3613 187.712 75.0707 183.661 68.292C179.693 61.4307 177.709 53.7427 177.709 45.228C177.709 36.7133 179.693 29.0667 183.661 22.288C187.712 15.5093 193.127 10.2187 199.905 6.41601C206.767 2.61334 214.289 0.712006 222.473 0.712006C230.657 0.712006 238.139 2.61334 244.917 6.41601C251.779 10.2187 257.152 15.5093 261.037 22.288C265.005 29.0667 266.989 36.7133 266.989 45.228C266.989 53.7427 265.005 61.4307 261.037 68.292C257.069 75.0707 251.696 80.3613 244.917 84.164C238.139 87.9667 230.657 89.868 222.473 89.868ZM222.473 70.524C229.417 70.524 234.956 68.2093 239.089 63.58C243.305 58.9507 245.413 52.8333 245.413 45.228C245.413 37.54 243.305 31.4227 239.089 26.876C234.956 22.2467 229.417 19.932 222.473 19.932C215.447 19.932 209.825 22.2053 205.609 26.752C201.476 31.2987 199.409 37.4573 199.409 45.228C199.409 52.916 201.476 59.0747 205.609 63.704C209.825 68.2507 215.447 70.524 222.473 70.524Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M377.366 1.952V89H356.162V36.796L336.694 89H319.582L299.99 36.672V89H278.786V1.952H303.834L328.262 62.216L352.442 1.952H377.366Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M413.818 1.952V89H392.614V1.952H413.818Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M479.652 89L450.388 50.56V89H429.184V1.952H450.388V40.144L479.404 1.952H504.328L470.6 44.608L505.568 89H479.652Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M536.477 1.952V54.032C536.477 59.24 537.758 63.2493 540.321 66.06C542.884 68.8707 546.645 70.276 551.605 70.276C556.565 70.276 560.368 68.8707 563.013 66.06C565.658 63.2493 566.981 59.24 566.981 54.032V1.952H588.185V53.908C588.185 61.6787 586.532 68.2507 583.225 73.624C579.918 78.9973 575.454 83.048 569.833 85.776C564.294 88.504 558.094 89.868 551.233 89.868C544.372 89.868 538.213 88.5453 532.757 85.9C527.384 83.172 523.126 79.1213 519.985 73.748C516.844 68.292 515.273 61.6787 515.273 53.908V1.952H536.477Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+				<path
+					d="M680.947 89H659.743L624.279 35.308V89H603.075V1.952H624.279L659.743 55.892V1.952H680.947V89Z"
+					stroke={useColorModeValue("black", "white")}
+					strokeWidth="6"
+				/>
+			</svg>
 		</Box>
 	);
 };

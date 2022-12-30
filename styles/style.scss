@@ -1,5 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Rubik+Moonrocks&family=Tangerine:wght@700&family=Ubuntu:wght@700&display=swap");
 
+#loader {
+	padding: 0 1.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+#loader path:nth-child(1) {
+	stroke-dasharray: 407px;
+	stroke-dashoffset: 407px;
+	animation: loader-animation 2s ease forwards;
+}
+
+#loader path:nth-child(2) {
+	stroke-dasharray: 338px;
+	stroke-dashoffset: 338px;
+	animation: loader-animation 2s ease forwards 0.3s;
+}
+
+#loader path:nth-child(3) {
+	stroke-dasharray: 436px;
+	stroke-dashoffset: 436px;
+	animation: loader-animation 2s ease forwards 0.6s;
+}
+
+#loader path:nth-child(4) {
+	stroke-dasharray: 629px;
+	stroke-dashoffset: 629px;
+	animation: loader-animation 2s ease forwards 0.9s;
+}
+
+#loader path:nth-child(5) {
+	stroke-dasharray: 216px;
+	stroke-dashoffset: 216px;
+	animation: loader-animation 2s ease forwards 1.2s;
+}
+
+#loader path:nth-child(6) {
+	stroke-dasharray: 464px;
+	stroke-dashoffset: 464px;
+	animation: loader-animation 2s ease forwards 1.5s;
+}
+
+#loader path:nth-child(7) {
+	stroke-dasharray: 417px;
+	stroke-dashoffset: 417px;
+	animation: loader-animation 2s ease forwards 1.8s;
+}
+
+#loader path:nth-child(8) {
+	stroke-dasharray: 495px;
+	stroke-dashoffset: 495px;
+	animation: loader-animation 2s ease forwards 2.1s;
+}
+
 .desktop-nav {
 	position: relative;
 }
@@ -193,5 +250,11 @@
 	}
 	100% {
 		background-position: 10% 50%;
+	}
+}
+
+@keyframes loader-animation {
+	to {
+		stroke-dashoffset: 0;
 	}
 }

@@ -1,11 +1,18 @@
 import Head from "next/head";
 import { Box, useColorModeValue } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
-import HomeSection from "../components/Home";
-import About from "../components/About";
+import Loader from "../components/Loader";
+import { useEffect, useState } from "react";
+import PortfolioPage from "../components";
 
 export default function Home() {
-	// const { colorMode, toggleColorMode} = useColorMode();
+	const [isLoading, setIsLoading] = useState(false);
+
+	useEffect(() => {
+		setIsLoading(true);
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 8000);
+	}, []);
 	return (
 		<>
 			<Head>
@@ -15,10 +22,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Box bg={useColorModeValue("white", "black")} height={"100vh"}>
-				{/* <Loader /> */}
-				<Navbar />
-				<HomeSection />
-				<About />
+				{isLoading ? <Loader /> : <PortfolioPage />}
 			</Box>
 		</>
 	);

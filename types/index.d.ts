@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 interface NavItems {
 	emoji: string;
 	label: string;
@@ -6,6 +5,6 @@ interface NavItems {
 }
 
 interface EmojiType {
-	symbol: any;
+	symbol: string;
 	label: string;
 }
