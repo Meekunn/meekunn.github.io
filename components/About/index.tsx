@@ -9,10 +9,19 @@ const About = () => {
 	const bgColor = useColorModeValue("white", "black");
 	const heading = "Get to know me ".split("");
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: false });
+	const isInView = useInView(ref, { once: true });
 
 	return (
-		<Box id="about" bg={bgColor} px={8} pt={{ base: 8, sm: 4, md: 8 }} position="relative">
+		<Box
+			id="about"
+			bg={bgColor}
+			px={8}
+			pt={{ base: 8, sm: 4, md: 8 }}
+			position="relative"
+			borderBottom={"1px"}
+			borderStyle="dashed"
+			borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
+		>
 			<Text
 				variant="htmlTags"
 				color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
