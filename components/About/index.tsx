@@ -4,6 +4,9 @@ import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ayoMikun from "../../assets/myface.png";
+import { Tangerine } from "@next/font/google";
+
+const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
 
 const About = () => {
 	const bgColor = useColorModeValue("white", "black");
@@ -23,7 +26,7 @@ const About = () => {
 			borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 		>
 			<Text
-				variant="htmlTags"
+				className={tangerine.className}
 				color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 				fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 			>
@@ -32,7 +35,7 @@ const About = () => {
 			<Flex direction={{ base: "column", md: "row" }} px={{ base: 4, lg: 6 }} py={4} gap={4}>
 				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -47,14 +50,14 @@ const About = () => {
 						👋🏾
 					</Heading>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
 						&lt;&#47;h2&gt;
 					</Text>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -71,7 +74,7 @@ const About = () => {
 						opportunities.
 					</Text>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
@@ -80,7 +83,7 @@ const About = () => {
 				</Flex>
 				<Flex direction={"column"} w={{ md: "50%" }}>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -111,7 +114,7 @@ const About = () => {
 						</Box>
 					</Box>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>

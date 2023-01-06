@@ -35,7 +35,6 @@ const HomeSection = () => {
 			<Flex direction={{ base: "column", md: "row" }} px={{ base: 6, lg: 10 }} py={8} gap={4}>
 				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
 					<Text
-						// variant="htmlTags"
 						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
@@ -109,7 +108,6 @@ const HomeSection = () => {
 						))}
 					</Heading>
 					<Text
-						//variant="htmlTags"
 						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
@@ -117,7 +115,7 @@ const HomeSection = () => {
 						&lt;&#47;h1&gt;
 					</Text>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
@@ -142,7 +140,7 @@ const HomeSection = () => {
 						/>
 					</Box>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
@@ -151,7 +149,7 @@ const HomeSection = () => {
 				</Flex>
 				<Flex direction={"column"} w={{ md: "50%" }}>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -169,7 +167,7 @@ const HomeSection = () => {
 						<Image src={homeDoddle} alt="Code-typing-cuate" priority className="home-img" />
 					</Box>
 					<Text
-						variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>

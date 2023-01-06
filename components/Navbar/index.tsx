@@ -15,6 +15,9 @@ import {
 import MobileNav from "./MobileNav";
 import { slideStyle } from "./style";
 import DesktopNav from "./DesktopNav";
+import { Rubik_Moonrocks } from "@next/font/google";
+
+const rubik_moonrocks = Rubik_Moonrocks({ weight: "400", subsets: ["latin"], preload: true });
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -36,7 +39,7 @@ const Navbar = () => {
 					align="center"
 				>
 					<Text
-						variant="myNameLogo"
+						className={rubik_moonrocks.className}
 						color={useColorModeValue("black", "white")}
 						fontSize={{ base: "2xl", md: "3xl" }}
 						cursor="pointer"
