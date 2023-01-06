@@ -5,6 +5,9 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import homeDoddle from "../../assets/Code-typing-cuate.png";
+import { Tangerine } from "@next/font/google";
+
+const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
 
 const HomeSection = () => {
 	const bgColor = useColorModeValue("white", "black");
@@ -32,7 +35,8 @@ const HomeSection = () => {
 			<Flex direction={{ base: "column", md: "row" }} px={{ base: 6, lg: 10 }} py={8} gap={4}>
 				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
 					<Text
-						variant="htmlTags"
+						// variant="htmlTags"
+						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
@@ -105,7 +109,8 @@ const HomeSection = () => {
 						))}
 					</Heading>
 					<Text
-						variant="htmlTags"
+						//variant="htmlTags"
+						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
