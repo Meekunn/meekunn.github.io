@@ -1,13 +1,13 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const Loader = () => {
-	useEffect(() => {
-		const loader: NodeListOf<SVGGeometryElement> = document.querySelectorAll("#loader path");
-		for (let i = 0; i < loader.length; i++) {
-			console.log(`${i} is ${loader[i].getTotalLength()}`);
-		}
-	}, []);
+	// useEffect(() => {
+	// 	const loader: NodeListOf<SVGGeometryElement> = document.querySelectorAll("#loader path");
+	// 	for (let i = 0; i < loader.length; i++) {
+	// 		console.log(`${i} is ${loader[i].getTotalLength()}`);
+	// 	}
+	// }, []);
 
 	return (
 		<Box

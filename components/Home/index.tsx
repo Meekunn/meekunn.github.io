@@ -17,7 +17,7 @@ const HomeSection = () => {
 	const ref = useRef(null);
 	const ref2 = useRef(null);
 	const refImage = useRef(null);
-	const isInView = useInView(ref, { once: false });
+	const isInView = useInView(ref, { once: true });
 	return (
 		<Box
 			id="home"
@@ -33,7 +33,7 @@ const HomeSection = () => {
 			borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 		>
 			<Flex direction={{ base: "column", md: "row" }} px={{ base: 6, lg: 10 }} py={8} gap={4}>
-				<Flex direction={"column"} w={{ base: "100%", md: "50%" }}>
+				<Flex direction={"column"} w={{ base: "100%", md: "50%" }} justify="center">
 					<Text
 						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
@@ -147,14 +147,14 @@ const HomeSection = () => {
 						&lt;&#47;span&gt;
 					</Text>
 				</Flex>
-				<Flex direction={"column"} w={{ md: "50%" }}>
-					<Text
+				<Flex direction={"column"} w={{ md: "50%" }} justify="center">
+					{/* <Text
 						className={tangerine.className}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
 						&lt;div class=&quot;img-container&quot;&gt;
-					</Text>
+					</Text> */}
 					<Box
 						w={"100%"}
 						as={motion.div}
@@ -166,13 +166,13 @@ const HomeSection = () => {
 					>
 						<Image src={homeDoddle} alt="Code-typing-cuate" priority className="home-img" />
 					</Box>
-					<Text
+					{/* <Text
 						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 					>
 						&lt;&#47;div&gt;
-					</Text>
+					</Text> */}
 				</Flex>
 			</Flex>
 		</Box>

@@ -10,13 +10,12 @@ import { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 
 function App({ Component, pageProps }: AppProps) {
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		setIsLoading(true);
 		setTimeout(() => {
 			setIsLoading(false);
-		}, 6000);
+		}, 5500);
 	}, []);
 	return (
 		<ChakraProvider theme={theme}>
