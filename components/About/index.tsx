@@ -5,12 +5,13 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ayoMikun from "../../assets/myface.png";
 import { Tangerine } from "@next/font/google";
+import { sectionHeadingDark, sectionHeadingLight } from "./style";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
 
 const About = () => {
 	const bgColor = useColorModeValue("white", "black");
-	const heading = "Get to know me ".split("");
+	const heading = "Get to know me".split("");
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 
@@ -41,7 +42,12 @@ const About = () => {
 					>
 						&lt;h2&gt;
 					</Text>
-					<Heading as="h2" pl={2} mb={1}>
+					<Heading
+						as="h2"
+						pl={2}
+						mb={1}
+						sx={useColorModeValue(sectionHeadingLight, sectionHeadingDark)}
+					>
 						{heading.map((letter, index) => (
 							<BouncyTextAnim key={index} className="section-heading">
 								{letter === " " ? "\u00A0" : letter}

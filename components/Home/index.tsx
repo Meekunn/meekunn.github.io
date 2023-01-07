@@ -22,12 +22,13 @@ const HomeSection = () => {
 		<Box
 			id="home"
 			bg={bgColor}
-			pt={{ base: 8, sm: 4, md: 8 }}
+			pt={{ base: 8, sm: 8, md: 8 }}
 			pb={2}
 			position="relative"
 			display="flex"
 			alignItems={"center"}
 			h="100vh"
+			top={{ sm: "120px", md: 0 }}
 			borderBottom={"1px"}
 			borderStyle="dashed"
 			borderColor={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
@@ -52,9 +53,13 @@ const HomeSection = () => {
 							filter: isInView ? "blur(0)" : "blur(5px)",
 							transition: "all 1.5s 0.5s",
 						}}
+						color={useColorModeValue("blackAlpha.800", "white")}
 					>
 						{intro_line1.map((letter, index) => (
-							<BouncyTextAnim key={index} className="bouncy_anim">
+							<BouncyTextAnim
+								key={index}
+								sx={{ _hover: { color: "#cc2ed1", transition: "all 0.2s ease-in-out" } }}
+							>
 								{letter === " " ? "\u00A0" : letter}
 							</BouncyTextAnim>
 						))}
@@ -121,7 +126,7 @@ const HomeSection = () => {
 					>
 						&lt;span&gt;
 					</Text>
-					<Box pl={2} fontSize={{ base: "sm", sm: "md", md: "xl", lg: "2xl" }}>
+					<Box pl={2} fontSize={{ base: "sm", lg: "xl" }}>
 						<Typewriter
 							options={{
 								strings: [

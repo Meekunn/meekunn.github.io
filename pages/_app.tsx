@@ -15,7 +15,7 @@ function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		setTimeout(() => {
 			setIsLoading(false);
-		}, 5500);
+		}, 5000);
 	}, []);
 	return (
 		<ChakraProvider theme={theme}>
