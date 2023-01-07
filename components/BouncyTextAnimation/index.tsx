@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion, useAnimationControls } from "framer-motion";
 import { useState } from "react";
 import { Box, SystemStyleObject } from "@chakra-ui/react";
@@ -6,9 +7,10 @@ interface IBouncyTextAnim {
 	children: string;
 	className?: string;
 	sx?: SystemStyleObject;
+	animation?: any;
 }
 
-const BouncyTextAnim = ({ children, className, sx }: IBouncyTextAnim) => {
+const BouncyTextAnim = ({ children, className, sx, animation }: IBouncyTextAnim) => {
 	const [isBouncing, setIsBouncing] = useState(false);
 	const controls = useAnimationControls();
 	const bouncy_effect = () => {
@@ -36,6 +38,7 @@ const BouncyTextAnim = ({ children, className, sx }: IBouncyTextAnim) => {
 			onMouseOver={() => {
 				if (!isBouncing) bouncy_effect();
 			}}
+			animation={animation}
 			onAnimationComplete={() => setIsBouncing(false)}
 			className={className}
 			display="inline-block"

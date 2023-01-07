@@ -1,4 +1,13 @@
-import { Box, useColorModeValue, Flex, Text, Heading } from "@chakra-ui/react";
+import {
+	Box,
+	useColorModeValue,
+	Flex,
+	Text,
+	Heading,
+	keyframes,
+	Link,
+	useColorMode,
+} from "@chakra-ui/react";
 import BouncyTextAnim from "../BouncyTextAnimation";
 import Image from "next/image";
 import { useRef } from "react";
@@ -6,14 +15,27 @@ import { motion, useInView } from "framer-motion";
 import ayoMikun from "../../assets/myface.png";
 import { Tangerine } from "@next/font/google";
 import { sectionHeadingDark, sectionHeadingLight } from "./style";
+import { TbExternalLink } from "react-icons/tb";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
+const animate = keyframes`
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}`;
 
 const About = () => {
+	const { colorMode } = useColorMode();
 	const bgColor = useColorModeValue("white", "black");
 	const heading = "Get to know me".split("");
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
+	const headingAnimation = `3s ${animate} infinite linear`;
 
 	return (
 		<Box
@@ -49,7 +71,11 @@ const About = () => {
 						sx={useColorModeValue(sectionHeadingLight, sectionHeadingDark)}
 					>
 						{heading.map((letter, index) => (
-							<BouncyTextAnim key={index} className="section-heading">
+							<BouncyTextAnim
+								key={index}
+								className="section-heading"
+								//animation={headingAnimation}
+							>
 								{letter === " " ? "\u00A0" : letter}
 							</BouncyTextAnim>
 						))}
@@ -69,15 +95,56 @@ const About = () => {
 					>
 						&lt;p&gt;
 					</Text>
-					<Text px={4} letterSpacing={"1px"} fontWeight="500" fontSize={{ base: "sm", md: "md" }}>
-						Hi there! I am a dedicated and driven frontend developer, with a strong passion for what
-						I do. I am self-motivated and highly resilient, and I am always eager to learn and adapt
-						to new technologies and techniques. I am a resilient individual, and I am open to
-						learning and unlearning when necessary, as I believe that staying up-to-date and
-						flexible is key to success in this field. With my skills and determination, I am
-						confident that I can make a valuable contribution to any team. I am excited to continue
-						growing and evolving as a developer, and I am looking forward to new challenges and
-						opportunities.
+					<Text
+						px={4}
+						py={1}
+						letterSpacing={"1px"}
+						fontSize={{ base: "sm", md: "md" }}
+						textIndent="1rem"
+					>
+						Hi there! My name is Mikun and I am a web developer with experience interning at a
+						startup company called{" "}
+						<Link
+							href="https://weixeltech.com/"
+							textDecoration={"none !important"}
+							className={colorMode === "light" ? "link-light" : "link-dark"}
+							isExternal
+						>
+							Weixel Tech
+						</Link>{" "}
+						and volunteering for a technical community called
+						<Link
+							href="https://empowerher.community/"
+							ml="3px"
+							textDecoration={"none !important"}
+							className={colorMode === "light" ? "link-light" : "link-dark"}
+							isExternal
+						>
+							EmpowerHer Community.
+						</Link>
+					</Text>
+					<Text
+						px={4}
+						py={1}
+						letterSpacing={"1px"}
+						fontSize={{ base: "sm", md: "md" }}
+						textIndent="1rem"
+					>
+						I am passionate about building impactful applications and am eager to work with talented
+						people in the field to continue learning and growing my skills. I am self-motivated,
+						highly resilient, and always open to learning and unlearning new technologies and
+						techniques in order to stay up-to-date and flexible.
+					</Text>
+					<Text
+						px={4}
+						py={1}
+						letterSpacing={"1px"}
+						fontSize={{ base: "sm", md: "md" }}
+						textIndent="1rem"
+					>
+						I believe that this is key to success in this field and am always looking for new
+						challenges and opportunities to grow. With my skills and determination, I am confident
+						that I can make a positive impact in any team I join.
 					</Text>
 					<Text
 						className={tangerine.className}

@@ -97,7 +97,21 @@
 	position: relative;
 }
 
-.desktop-navlink-dark::after {
+.link-dark {
+	font-weight: 600;
+	color: #f87aaa !important;
+	position: relative;
+}
+
+.link-light {
+	font-weight: 600;
+	color: #960b6a !important;
+	position: relative;
+}
+
+.desktop-navlink-dark::after,
+.link-dark::after,
+.link-light::after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -110,7 +124,19 @@
 	transition: all 0.25s ease-out;
 }
 
-.desktop-navlink-dark:hover::after {
+.link-dark::after {
+	background-color: #f87aaa;
+	height: 1px;
+}
+.link-light::after {
+	position: absolute;
+	background-color: #960b6a;
+	height: 1px;
+}
+
+.desktop-navlink-dark:hover::after,
+.link-dark:hover::after,
+.link-light:hover::after {
 	// color: #1a202c;
 	transform-origin: bottom left;
 	transform: scaleX(1);
@@ -133,7 +159,7 @@
 	font-weight: 700;
 	color: transparent;
 	background: linear-gradient(90deg, #e73c7e, #23a6d5, rgb(221, 155, 80), #cb7ceb) 0 0 / 400% auto;
-	animation: 8s text_gradient infinite linear;
+	animation: 8s text_gradient infinite alternate;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	background-clip: text;
