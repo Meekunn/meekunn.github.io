@@ -15,3 +15,17 @@ export const sectionHeadingDark = {
 		backgroundClip: "text",
 	},
 };
+
+export const tagCloudLight = {
+	div: {
+		color: "#960b6a",
+		fontWeight: "700",
+	},
+};
+
+export const tagCloudDark = {
+	div: {
+		color: "#f894b4",
+		fontWeight: "700",
+	},
+};

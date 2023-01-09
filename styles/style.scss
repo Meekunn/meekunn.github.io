@@ -168,33 +168,6 @@
 	cursor: pointer;
 }
 
-// .bouncy_anim:hover {
-// 	color: #cc2ed1;
-// 	transition: all 0.2s ease-in-out;
-// }
-
-// .section-heading {
-// 	color: transparent;
-// 	background: linear-gradient(90deg, #11175c, #e73c7e);
-// 	animation: 8s text_gradient infinite linear;
-// 	-webkit-background-clip: text;
-// 	-moz-background-clip: text;
-// 	background-clip: text;
-// 	-webkit-text-fill-color: transparent;
-// 	letter-spacing: 1px;
-// }
-
-// .section-heading-dark {
-// 	color: transparent;
-// 	background: linear-gradient(90deg, #e73c7e, #d2eb7c);
-// 	animation: 8s text_gradient infinite linear;
-// 	-webkit-background-clip: text;
-// 	-moz-background-clip: text;
-// 	background-clip: text;
-// 	-webkit-text-fill-color: transparent;
-// 	letter-spacing: 1px;
-// }
-
 .desktop-navlink-light::after {
 	content: "";
 	position: absolute;
@@ -228,13 +201,12 @@
 	animation: home-img-anim infinite alternate 2s 1.5s;
 }
 
-.about-img {
-	transition: all 0.5s ease;
-}
-
-.about-img:hover {
-	transform: scaleX(-1);
-}
+// .about-img {
+// 	filter: grayscale(1);
+// 	transition: all 0.5s ease;
+// 	border: 10px solid #960b6a;
+// 	border-radius: 30%;
+// }
 
 @keyframes section-heading-anim {
 	0% {
@@ -322,3 +294,30 @@
 		);
 	}
 }
+
+// .bouncy_anim:hover {
+// 	color: #cc2ed1;
+// 	transition: all 0.2s ease-in-out;
+// }
+
+// .section-heading {
+// 	color: transparent;
+// 	background: linear-gradient(90deg, #11175c, #e73c7e);
+// 	animation: 8s text_gradient infinite linear;
+// 	-webkit-background-clip: text;
+// 	-moz-background-clip: text;
+// 	background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	letter-spacing: 1px;
+// }
+
+// .section-heading-dark {
+// 	color: transparent;
+// 	background: linear-gradient(90deg, #e73c7e, #d2eb7c);
+// 	animation: 8s text_gradient infinite linear;
+// 	-webkit-background-clip: text;
+// 	-moz-background-clip: text;
+// 	background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	letter-spacing: 1px;
+// }

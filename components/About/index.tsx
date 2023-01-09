@@ -9,13 +9,11 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import BouncyTextAnim from "../BouncyTextAnimation";
-import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import ayoMikun from "../../assets/myface.png";
 import { Tangerine } from "@next/font/google";
-import { sectionHeadingDark, sectionHeadingLight } from "./style";
-import { TbExternalLink } from "react-icons/tb";
+import { sectionHeadingDark, sectionHeadingLight, tagCloudDark, tagCloudLight } from "./style";
+import { TagCloud, TagCloudOptions } from "@frank-mayer/react-tag-cloud";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
 const animate = keyframes`
@@ -160,31 +158,46 @@ const About = () => {
 						color={useColorModeValue("blackAlpha.600", "whiteAlpha.400")}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
 					>
-						&lt;div class=&quot;mikun-face&quot;&gt;
+						&lt;div class=&quot;skills&quot;&gt;
 					</Text>
 					<Box
 						w={"100%"}
 						as={motion.div}
 						ref={ref}
 						style={{
-							opacity: isInView ? 1 : 0,
-							transition: "all 1.5s 0.5s",
+							filter: isInView ? "blur(0px)" : "blur(1px)",
+							transition: "all 0.5s",
 						}}
 						display="flex"
 						justifyContent={"center"}
 						alignItems="center"
 						h="100%"
+						sx={colorMode === "light" ? tagCloudLight : tagCloudDark}
 					>
-						<Box
-							bg={useColorModeValue("blackAlpha.900", "whiteAlpha.900")}
-							border={"2px"}
-							borderStyle="solid"
-							borderRadius={"2rem"}
-							w={{ base: "250px", sm: "300px", md: "300px", lg: "400px" }}
-							my={4}
+						<TagCloud
+							options={(w: Window & typeof globalThis): TagCloudOptions => ({
+								radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
+								maxSpeed: "fast",
+							})}
+							onClick={(tag: string, ev: MouseEvent) => alert(tag)}
+							onClickOptions={{ passive: true }}
 						>
-							<Image src={ayoMikun} alt="A picture of Mikun" priority className="about-img" />
-						</Box>
+							{[
+								"HTML",
+								"CSS",
+								"Sass",
+								"JavaScript",
+								"TypeScript",
+								"VSCode",
+								"TypeScript",
+								"ReactJS",
+								"Git",
+								"Github",
+								"Firebase",
+								"Next.js",
+								"Chakra-UI",
+							]}
+						</TagCloud>
 					</Box>
 					<Text
 						className={tangerine.className}

@@ -1,18 +1,8 @@
 import Head from "next/head";
 import { Box } from "@chakra-ui/react";
-// import Loader from "../components/Loader";
-// import { useEffect, useState } from "react";
 import PortfolioPage from "../components";
 
 export default function Home() {
-	// const [isLoading, setIsLoading] = useState(false);
-
-	// useEffect(() => {
-	// 	setIsLoading(true);
-	// 	setTimeout(() => {
-	// 		setIsLoading(false);
-	// 	}, 7000);
-	// }, []);
 	return (
 		<>
 			<Head>
@@ -27,5 +17,3 @@ export default function Home() {
 		</>
 	);
 }
-
-//bg={useColorModeValue("white", "black")} height={"100vh"}
