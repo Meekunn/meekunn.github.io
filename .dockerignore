@@ -1,0 +1,3 @@
+node_modules.next.github;
+
+//docker build -t nextjs_portfolio:v1 .

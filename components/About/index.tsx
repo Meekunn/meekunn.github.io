@@ -4,36 +4,50 @@ import {
 	Flex,
 	Text,
 	Heading,
-	keyframes,
+	//keyframes,
 	Link,
 	useColorMode,
 } from "@chakra-ui/react";
 import BouncyTextAnim from "../BouncyTextAnimation";
-import { useRef } from "react";
+import {
+	//ChangeEvent,
+	//useEffect,
+	useRef,
+} from "react";
 import { motion, useInView } from "framer-motion";
 import { Tangerine } from "@next/font/google";
 import { sectionHeadingDark, sectionHeadingLight, tagCloudDark, tagCloudLight } from "./style";
 import { TagCloud, TagCloudOptions } from "@frank-mayer/react-tag-cloud";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
-const animate = keyframes`
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 50% 0%;
-	}`;
 
 const About = () => {
+	// useEffect(() => {
+	// 	const tagcloud_item = document.getElementsByClassName("tagcloud--item");
+
+	// 	for (let i = 0; i < tagcloud_item.length; i++) {
+	// 		tagcloud_item[i].onclick = animateClick();
+	// 	}
+	// }, []);
+	// const animateClick
+	// const animateClick = (e: ChangeEvent<HTMLSpanElement>) => {
+	// 	e.preventDefault;
+
+	// 	//reset animation
+	// 	e.target.classList.remove("animate");
+
+	// 	e.target.classList.add("animate");
+	// 	setTimeout(function () {
+	// 		e.target.classList.remove("animate");
+	// 	}, 700);
+	// };
+
 	const { colorMode } = useColorMode();
 	const bgColor = useColorModeValue("white", "black");
 	const heading = "Get to know me".split("");
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
-	const headingAnimation = `3s ${animate} infinite linear`;
+	//const headingAnimation = `3s ${animate} infinite linear`;
 
 	return (
 		<Box
@@ -178,8 +192,9 @@ const About = () => {
 							options={(w: Window & typeof globalThis): TagCloudOptions => ({
 								radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
 								maxSpeed: "fast",
+								keep: false,
 							})}
-							onClick={(tag: string, ev: MouseEvent) => alert(tag)}
+							onClick={(tag: string) => alert(tag)}
 							onClickOptions={{ passive: true }}
 						>
 							{[
@@ -196,6 +211,7 @@ const About = () => {
 								"Firebase",
 								"Next.js",
 								"Chakra-UI",
+								"C/C++",
 							]}
 						</TagCloud>
 					</Box>
