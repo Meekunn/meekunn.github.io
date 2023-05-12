@@ -9,45 +9,16 @@ import {
 	useColorMode,
 } from "@chakra-ui/react";
 import BouncyTextAnim from "../BouncyTextAnimation";
-import {
-	//ChangeEvent,
-	//useEffect,
-	useRef,
-} from "react";
-import { motion, useInView } from "framer-motion";
 import { Tangerine } from "@next/font/google";
 import { sectionHeadingDark, sectionHeadingLight, tagCloudDark, tagCloudLight } from "./style";
-import { TagCloud, TagCloudOptions } from "@frank-mayer/react-tag-cloud";
+import TextSphere from "../TagCloud";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
 
 const About = () => {
-	// useEffect(() => {
-	// 	const tagcloud_item = document.getElementsByClassName("tagcloud--item");
-
-	// 	for (let i = 0; i < tagcloud_item.length; i++) {
-	// 		tagcloud_item[i].onclick = animateClick();
-	// 	}
-	// }, []);
-	// const animateClick
-	// const animateClick = (e: ChangeEvent<HTMLSpanElement>) => {
-	// 	e.preventDefault;
-
-	// 	//reset animation
-	// 	e.target.classList.remove("animate");
-
-	// 	e.target.classList.add("animate");
-	// 	setTimeout(function () {
-	// 		e.target.classList.remove("animate");
-	// 	}, 700);
-	// };
-
 	const { colorMode } = useColorMode();
 	const bgColor = useColorModeValue("white", "black");
 	const heading = "Get to know me".split("");
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
-	//const headingAnimation = `3s ${animate} infinite linear`;
 
 	return (
 		<Box
@@ -175,45 +146,13 @@ const About = () => {
 						&lt;div class=&quot;skills&quot;&gt;
 					</Text>
 					<Box
-						w={"100%"}
-						as={motion.div}
-						ref={ref}
-						style={{
-							filter: isInView ? "blur(0px)" : "blur(1px)",
-							transition: "all 0.5s",
-						}}
 						display="flex"
 						justifyContent={"center"}
 						alignItems="center"
 						h="100%"
 						sx={colorMode === "light" ? tagCloudLight : tagCloudDark}
 					>
-						<TagCloud
-							options={(w: Window & typeof globalThis): TagCloudOptions => ({
-								radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
-								maxSpeed: "fast",
-								keep: false,
-							})}
-							onClick={(tag: string) => alert(tag)}
-							onClickOptions={{ passive: true }}
-						>
-							{[
-								"HTML",
-								"CSS",
-								"Sass",
-								"JavaScript",
-								"TypeScript",
-								"VSCode",
-								"TypeScript",
-								"ReactJS",
-								"Git",
-								"Github",
-								"Firebase",
-								"Next.js",
-								"Chakra-UI",
-								"C/C++",
-							]}
-						</TagCloud>
+						<TextSphere />
 					</Box>
 					<Text
 						className={tangerine.className}

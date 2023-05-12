@@ -77,7 +77,10 @@ const HomeSection = () => {
 						}}
 					>
 						{intro_line2.map((letter, index) => (
-							<BouncyTextAnim key={index} className="bouncy_anim">
+							<BouncyTextAnim
+								key={index}
+								sx={{ _hover: { color: "#cc2ed1", transition: "all 0.2s ease-in-out" } }}
+							>
 								{letter === " " ? "\u00A0" : letter}
 							</BouncyTextAnim>
 						))}
@@ -107,7 +110,10 @@ const HomeSection = () => {
 						}}
 					>
 						{intro_line3.map((letter, index) => (
-							<BouncyTextAnim key={index} className="bouncy_anim">
+							<BouncyTextAnim
+								key={index}
+								sx={{ _hover: { color: "#cc2ed1", transition: "all 0.2s ease-in-out" } }}
+							>
 								{letter === " " ? "\u00A0" : letter}
 							</BouncyTextAnim>
 						))}

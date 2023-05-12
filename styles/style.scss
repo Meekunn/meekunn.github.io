@@ -202,7 +202,7 @@
 }
 
 .tagcloud--item {
-	// font-size: 1em;
+	pointer-events: none;
 	cursor: pointer;
 	position: relative;
 	transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
