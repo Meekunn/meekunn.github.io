@@ -11,7 +11,7 @@ const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true }
 
 const HomeSection = () => {
 	const bgColor = useColorModeValue("white", "black");
-	const intro_line1 = "Hola,".split("");
+	const intro_line1 = "Hi,".split("");
 	const intro_line2 = "I'm ".split("");
 	const intro_line3 = "a front-end developer.".split("");
 	const ref = useRef(null);

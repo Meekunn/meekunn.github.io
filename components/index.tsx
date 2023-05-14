@@ -2,6 +2,7 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import HomeSection from "../components/Home";
 import About from "../components/About";
+import Projects from "./Projects";
 
 const PortfolioPage = () => {
 	return (
@@ -9,6 +10,7 @@ const PortfolioPage = () => {
 			<Navbar />
 			<HomeSection />
 			<About />
+			<Projects />
 		</Box>
 	);
 };

@@ -8,9 +8,9 @@ import {
 	Link,
 	useColorMode,
 } from "@chakra-ui/react";
-import BouncyTextAnim from "../BouncyTextAnimation";
 import { Tangerine } from "@next/font/google";
-import { sectionHeadingDark, sectionHeadingLight, tagCloudDark, tagCloudLight } from "./style";
+import { tagCloudDark, tagCloudLight } from "./style";
+import { sectionHeadingDark, sectionHeadingLight } from "../style";
 import TextSphere from "../TagCloud";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
@@ -18,8 +18,6 @@ const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true }
 const About = () => {
 	const { colorMode } = useColorMode();
 	const bgColor = useColorModeValue("white", "black");
-	const heading = "Get to know me".split("");
-
 	return (
 		<Box
 			id="about"
@@ -51,18 +49,10 @@ const About = () => {
 						as="h2"
 						pl={2}
 						mb={1}
+						fontSize={{ base: "2rem", sm: "4xl", md: "2.7rem", lg: "5xl" }}
 						sx={useColorModeValue(sectionHeadingLight, sectionHeadingDark)}
 					>
-						{heading.map((letter, index) => (
-							<BouncyTextAnim
-								key={index}
-								className="section-heading"
-								//animation={headingAnimation}
-							>
-								{letter === " " ? "\u00A0" : letter}
-							</BouncyTextAnim>
-						))}
-						👋🏾
+						<span>Get to know me</span> 😄
 					</Heading>
 					<Text
 						className={tangerine.className}

@@ -14,11 +14,11 @@ const navItems: NavItems[] = [
 		label: "Projects",
 		href: "#project",
 	},
-	{
-		emoji: "💼",
-		label: "Experience",
-		href: "#experience",
-	},
+	// {
+	// 	emoji: "💼",
+	// 	label: "Experience",
+	// 	href: "#experience",
+	// },
 	{
 		emoji: "🤙🏽",
 		label: "Contact",
