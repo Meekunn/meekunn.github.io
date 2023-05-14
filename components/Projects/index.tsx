@@ -50,7 +50,7 @@ const Projects = () => {
 						mb={1}
 						sx={useColorModeValue(sectionHeadingLight, sectionHeadingDark)}
 					>
-						<span>My creative endeavors</span> 🎨
+						<span>My Creative Endeavors</span> 🎨
 					</Heading>
 					<Text
 						className={tangerine.className}

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import HomeSection from "../components/Home";
 import About from "../components/About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 const PortfolioPage = () => {
 	return (
@@ -11,6 +12,7 @@ const PortfolioPage = () => {
 			<HomeSection />
 			<About />
 			<Projects />
+			<Contact />
 		</Box>
 	);
 };

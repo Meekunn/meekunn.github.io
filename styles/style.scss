@@ -279,9 +279,7 @@
 	left: 0;
 	height: 100%;
 }
-// .project-details::before:nth-child(1) {
-// 	background: linear-gradient(0deg, #cfdb56 0%, #7f64c8 100%);
-// }
+
 .project-list::before {
 	content: " ";
 	width: 2px;
@@ -291,28 +289,6 @@
 	left: 0;
 	height: 100%;
 }
-// .project-link-dark {
-// 	font-weight: 700;
-// 	transition: all 0.25s ease-out;
-// 	position: relative;
-// }
-
-// .project-link-dark:hover {
-// 	font-weight: 800;
-// }
-
-// .project-link-dark::after {
-// 	content: "";
-// 	position: absolute;
-// 	width: 100%;
-// 	transform: scaleX(0);
-// 	height: 2px;
-// 	bottom: 0;
-// 	left: 0;
-// 	background-color: #1a202c;
-// 	transform-origin: bottom right;
-// 	transition: all 0.25s ease-out;
-// }
 
 .project-name:hover {
 	font-weight: 500;
@@ -339,6 +315,77 @@
 .project-name:hover::before,
 .project-link:hover::before {
 	background: linear-gradient(270deg, #7f64c8 0%, #cfdb56 100%);
+}
+
+.contact-link:nth-child(1):hover::before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(135deg, #cfdb56 0%, #5856db 50%, #cfdb56 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	transition: 0.2s all linear;
+}
+.contact-link:nth-child(2):hover::before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(135deg, #64b1c8 0%, #a20cb6 50%, #64b1c8 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	transition: 0.2s all linear;
+}
+.contact-link:nth-child(3):hover::before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(135deg, #dbeb53 0%, #c785cf 50%, #dbeb53 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	transition: 0.2s all linear;
+}
+.contact-link:nth-child(4):hover::before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(135deg, #c1c864 0%, #e62ea8 50%, #c1c864 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	transition: 0.2s all linear;
+}
+.contact-link:nth-child(5):hover::before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(135deg, #6b22cc 0%, #e4e70f 50%, #6b22cc 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	transition: 0.2s all linear;
 }
 
 @keyframes topBubbles {
