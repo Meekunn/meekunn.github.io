@@ -11,7 +11,7 @@ import {
 import { Tangerine } from "@next/font/google";
 import { tagCloudDark, tagCloudLight } from "./style";
 import { sectionHeadingDark, sectionHeadingLight } from "../style";
-import TextSphere from "../TagCloud";
+import { TagCloud, TagCloudOptions } from "@frank-mayer/react-tag-cloud";
 
 const tangerine = Tangerine({ weight: "400", subsets: ["latin"], preload: true });
 
@@ -75,26 +75,17 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						Hi there! My name is Mikun and I am a web developer with experience interning at a
-						startup company called{" "}
+						Hey there! I&apos;m Mikun, a web wizard who sprinkles magic into code. I&apos;ve spread
+						my wings as an intern at the innovative startup,
 						<Link
-							href="https://weixeltech.com/"
+							href="https://www.doprax.com/"
 							textDecoration={"none !important"}
 							className={colorMode === "light" ? "link-light" : "link-dark"}
 							isExternal
 						>
-							Weixel Tech
-						</Link>{" "}
-						and volunteering for a technical community called
-						<Link
-							href="https://empowerher.community/"
-							ml="3px"
-							textDecoration={"none !important"}
-							className={colorMode === "light" ? "link-light" : "link-dark"}
-							isExternal
-						>
-							EmpowerHer Community.
+							Doprax
 						</Link>
+						.
 					</Text>
 					<Text
 						px={4}
@@ -103,10 +94,9 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						I am passionate about building impactful applications and am eager to work with talented
-						people in the field to continue learning and growing my skills. I am self-motivated,
-						highly resilient, and always open to learning and unlearning new technologies and
-						techniques in order to stay up-to-date and flexible.
+						Building remarkable applications is my passion, and I&apos;m eager to team up with
+						brilliant minds in the field to keep fueling my growth. I&apos;m a self-motivated
+						dynamo, always hungry to learn new technologies and stay ahead of the curve.
 					</Text>
 					<Text
 						px={4}
@@ -115,9 +105,11 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						I believe that this is key to success in this field and am always looking for new
-						challenges and opportunities to grow. With my skills and determination, I am confident
-						that I can make a positive impact in any team I join.
+						In this fast-paced realm, I believe the secret sauce lies in constant learning and
+						unlearning: adaptability. I thrive on challenges and constantly seek fresh opportunities
+						to expand my expertise. With my coding prowess and an unwavering spirit, I&apos;m
+						confident that I can bring a touch of magic to any team I&apos;m a part of. Let&apos;s
+						team up and create something remarkable!
 					</Text>
 					<Text
 						className={tangerine.className}
@@ -142,7 +134,30 @@ const About = () => {
 						h="100%"
 						sx={colorMode === "light" ? tagCloudLight : tagCloudDark}
 					>
-						<TextSphere />
+						<TagCloud
+							options={(w: Window & typeof globalThis): TagCloudOptions => ({
+								radius: Math.min(400, w.innerWidth, w.innerHeight) / 2,
+								maxSpeed: "fast",
+								keep: false,
+							})}
+							// onClick={(tag: string) => alert(tag)}
+							// onClickOptions={{ passive: true }}
+						>
+							{[
+								"Chakra-UI",
+								"HTML",
+								"TypeScript",
+								"CSS",
+								"Sass",
+								"JavaScript",
+								"Git",
+								"Github",
+								"Firebase",
+								"Nextjs",
+								"C++",
+								"ReactJS",
+							]}
+						</TagCloud>
 					</Box>
 					<Text
 						className={tangerine.className}

@@ -51,17 +51,26 @@ const Contact = () => {
 						&lt;&#47;h2&gt;
 					</Text>
 				</Flex>
-				<Flex w={"100%"} direction={"column"} gap={4}>
+				<Flex w={"100%"} direction={"column"} gap={6}>
 					<Text>
 						Thanks for stopping by! I&apos;m always on the lookout for new and exciting
 						opportunities. If you&apos;re interested in learning more about my work or have an
 						opportunity you&apos;d like to discuss, feel free to reach out. Let&apos;s chat about
 						how we can bring your project to life!
 					</Text>
-					<Heading as="h3" fontSize={"3xl"}>
+					{/* <Heading as="h3" fontSize={"3xl"}>
 						Find me on the web 📡
-					</Heading>
-					<Flex>
+					</Heading> */}
+					<Flex
+						//direction={{ base: "column", md: "row" }}
+						direction={"row"}
+						flexWrap={"wrap"}
+						//align={{ base: "flex-start", md: "center" }}
+						align="center"
+						justify={"space-around"}
+						width={{ base: "100%", md: "80%" }}
+						gap={3}
+					>
 						<Link
 							as={NextLink}
 							href="tel:+234906487285"
@@ -69,7 +78,7 @@ const Contact = () => {
 							className="contact-link"
 							position={"relative"}
 						>
-							🤙 Phone
+							📱 Phone
 						</Link>
 						<Link
 							as={NextLink}
