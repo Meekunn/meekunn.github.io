@@ -1,5 +1,19 @@
 export const projects: Project[] = [
 	{
+		name: "Feature-Rich Text Editor",
+		summary:
+			"Developed a text editor that offers a user-friendly interface and a wide range of functionalities for editing and manipulating text. The features implemented include: Text Editing, Formatting Options, File Management, and Encoding Support.",
+		github: "https://github.com/Meekunn/Text_Editor/",
+		tools: ["C++", "Qt Creator"],
+	},
+	{
+		name: "Smart Room/Vault Monitoring System.",
+		summary:
+			"This is an Arduino-based project that utilizes an LED, an ultrasonic sensor, and a temperature sensor. The project involves controlling the LED, reading data from the sensors, and transmitting the collected data to a computer through the Arduino's serial port. Additionally, a QT application is developed to read the data from the serial port and display it in real-time on a graphical user interface (GUI).",
+		github: "https://github.com/Meekunn/Smart_System_Vault/",
+		tools: ["C/C++", "Qt Creator", "Arduino"],
+	},
+	{
 		name: "Towering Heights School",
 		summary:
 			"Collaborated with UI/UX designers to create a modern and user-friendly website for a school (Towering Heights School). Key features included a streamlined navigation system, photo gallery, and an intuitive staff carousel. By utilizing the latest web development technologies and design best practices, we were able to create a responsive and accessible platform that catered to the needs of students, parents, and staff.",

@@ -103,24 +103,28 @@ const Projects = () => {
 								))}
 							</Flex>
 							<Flex direction={"row"} gap={4} wrap={"wrap"}>
-								<Link
-									as={NextLink}
-									p={0.5}
-									textDecoration="none !important"
-									href={currentProject.url}
-									fontSize={{ md: "sm" }}
-									color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
-									className="project-link"
-									position={"relative"}
-									fontWeight={"bold"}
-									transition={"0.2s all ease-in-out"}
-									_hover={{
-										color: colorMode === "light" ? "black" : "white",
-									}}
-									// className={colorMode === "light" ? "desktop-navlink-light" : "desktop-navlink-dark"}
-								>
-									View Website
-								</Link>
+								{currentProject.url ? (
+									<Link
+										as={NextLink}
+										p={0.5}
+										textDecoration="none !important"
+										href={currentProject.url}
+										fontSize={{ md: "sm" }}
+										color={colorMode === "light" ? "blackAlpha.800" : "whiteAlpha.800"}
+										className="project-link"
+										position={"relative"}
+										fontWeight={"bold"}
+										transition={"0.2s all ease-in-out"}
+										_hover={{
+											color: colorMode === "light" ? "black" : "white",
+										}}
+										// className={colorMode === "light" ? "desktop-navlink-light" : "desktop-navlink-dark"}
+									>
+										View Website
+									</Link>
+								) : (
+									<></>
+								)}
 								<Link
 									as={NextLink}
 									p={0.5}

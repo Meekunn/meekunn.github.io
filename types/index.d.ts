@@ -13,6 +13,6 @@ interface Project {
 	name: string;
 	summary: string;
 	github: string;
-	url: string;
+	url?: string;
 	tools: string[];
 }
