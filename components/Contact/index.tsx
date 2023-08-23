@@ -71,7 +71,7 @@ const Contact = () => {
 						width={{ base: "100%", md: "80%" }}
 						gap={3}
 					>
-						<Link
+						{/* <Link
 							as={NextLink}
 							href="tel:+234906487285"
 							textDecoration={"none !important"}
@@ -79,7 +79,7 @@ const Contact = () => {
 							position={"relative"}
 						>
 							📱 Phone
-						</Link>
+						</Link> */}
 						<Link
 							as={NextLink}
 							href="https://twitter.com/Reactjs_babe"
