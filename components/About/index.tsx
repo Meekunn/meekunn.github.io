@@ -74,18 +74,9 @@ const About = () => {
 						letterSpacing={"1px"}
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
-					>
-						Hey there! I&apos;m Mikun, a web wizard who sprinkles magic into code. I&apos;ve spread
-						my wings as an intern at the innovative startup,
-						<Link
-							href="https://www.doprax.com/"
-							textDecoration={"none !important"}
-							className={colorMode === "light" ? "link-light" : "link-dark"}
-							isExternal
-						>
-							Doprax
-						</Link>
-						.
+					>Hi there! I&apos;m Mikun, a web enthusiast known for infusing a touch of magic into
+						code. My passion lies in building exceptional applications, and I&apos;m eager to
+						collaborate with brilliant minds in the field to foster my continual growth.
 					</Text>
 					<Text
 						px={4}
@@ -94,9 +85,10 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						Building remarkable applications is my passion, and I&apos;m eager to team up with
-						brilliant minds in the field to keep fueling my growth. I&apos;m a self-motivated
-						dynamo, always hungry to learn new technologies and stay ahead of the curve.
+						In the dynamic world of web development, I firmly believe that adaptability is the
+						secret to staying ahead. I&apos;m a self-motivated dynamo, always on the lookout to
+						learn new technologies and embrace evolving trends. Thriving on challenges, I actively
+						seek opportunities to broaden my expertise.
 					</Text>
 					<Text
 						px={4}
@@ -105,11 +97,9 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						In this fast-paced realm, I believe the secret sauce lies in constant learning and
-						unlearning: adaptability. I thrive on challenges and constantly seek fresh opportunities
-						to expand my expertise. With my coding prowess and an unwavering spirit, I&apos;m
-						confident that I can bring a touch of magic to any team I&apos;m a part of. Let&apos;s
-						team up and create something remarkable!
+						Armed with a strong coding background and an unwavering spirit, I&apos;m confident in my
+						ability to contribute positively to any team. Let&apos;s come together and create
+						something truly extraordinary!
 					</Text>
 					<Text
 						className={tangerine.className}
@@ -154,8 +144,11 @@ const About = () => {
 								"Github",
 								"Firebase",
 								"Nextjs",
-								"C++",
+								"C/C++",
 								"ReactJS",
+								"Tailwind",
+								"ReactQuery",
+								"Redux",
 							]}
 						</TagCloud>
 					</Box>
