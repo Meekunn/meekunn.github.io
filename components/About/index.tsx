@@ -1,13 +1,4 @@
-import {
-	Box,
-	useColorModeValue,
-	Flex,
-	Text,
-	Heading,
-	//keyframes,
-	Link,
-	useColorMode,
-} from "@chakra-ui/react";
+import { Box, useColorModeValue, Flex, Text, Heading, useColorMode } from "@chakra-ui/react";
 import { Tangerine } from "@next/font/google";
 import { tagCloudDark, tagCloudLight } from "./style";
 import { sectionHeadingDark, sectionHeadingLight } from "../style";
@@ -74,7 +65,8 @@ const About = () => {
 						letterSpacing={"1px"}
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
-					>Hi there! I&apos;m Mikun, a web enthusiast known for infusing a touch of magic into
+					>
+						Hi there! I&apos;m Mikun, a web enthusiast known for infusing a touch of magic into
 						code. My passion lies in building exceptional applications, and I&apos;m eager to
 						collaborate with brilliant minds in the field to foster my continual growth.
 					</Text>
@@ -144,11 +136,8 @@ const About = () => {
 								"Github",
 								"Firebase",
 								"Nextjs",
-								"C/C++",
+								"C++",
 								"ReactJS",
-								"Tailwind",
-								"ReactQuery",
-								"Redux",
 							]}
 						</TagCloud>
 					</Box>

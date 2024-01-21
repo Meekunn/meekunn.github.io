@@ -118,31 +118,33 @@ const Projects = () => {
 										_hover={{
 											color: colorMode === "light" ? "black" : "white",
 										}}
-										// className={colorMode === "light" ? "desktop-navlink-light" : "desktop-navlink-dark"}
 									>
 										View Website
 									</Link>
 								) : (
 									<></>
 								)}
-								<Link
-									as={NextLink}
-									p={0.5}
-									textDecoration="none !important"
-									href={currentProject.github}
-									fontSize={{ md: "sm" }}
-									color={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
-									className="project-link"
-									position={"relative"}
-									fontWeight={"bold"}
-									transition={"0.2s all ease-in-out"}
-									_hover={{
-										color: colorMode === "light" ? "black" : "white",
-									}}
-									// className={colorMode === "light" ? "desktop-navlink-light" : "desktop-navlink-dark"}
-								>
-									Github
-								</Link>
+								{currentProject.github ? (
+									<Link
+										as={NextLink}
+										p={0.5}
+										textDecoration="none !important"
+										href={currentProject.github}
+										fontSize={{ md: "sm" }}
+										color={colorMode === "light" ? "blackAlpha.800" : "whiteAlpha.800"}
+										className="project-link"
+										position={"relative"}
+										fontWeight={"bold"}
+										transition={"0.2s all ease-in-out"}
+										_hover={{
+											color: colorMode === "light" ? "black" : "white",
+										}}
+									>
+										Github
+									</Link>
+								) : (
+									<></>
+								)}
 							</Flex>
 						</Flex>
 					</Flex>
@@ -168,6 +170,7 @@ const Projects = () => {
 								<Box
 									as="button"
 									key={index}
+									textAlign="left"
 									fontSize={"sm"}
 									className="project-name"
 									pb={"0.2rem"}

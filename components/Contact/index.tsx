@@ -58,9 +58,6 @@ const Contact = () => {
 						opportunity you&apos;d like to discuss, feel free to reach out. Let&apos;s chat about
 						how we can bring your project to life!
 					</Text>
-					{/* <Heading as="h3" fontSize={"3xl"}>
-						Find me on the web 📡
-					</Heading> */}
 					<Flex
 						//direction={{ base: "column", md: "row" }}
 						direction={"row"}
@@ -71,15 +68,6 @@ const Contact = () => {
 						width={{ base: "100%", md: "80%" }}
 						gap={3}
 					>
-						{/* <Link
-							as={NextLink}
-							href="tel:+234906487285"
-							textDecoration={"none !important"}
-							className="contact-link"
-							position={"relative"}
-						>
-							📱 Phone
-						</Link> */}
 						<Link
 							as={NextLink}
 							href="https://twitter.com/Reactjs_babe"
