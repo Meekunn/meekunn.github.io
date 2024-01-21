@@ -1,8 +1,14 @@
 export const projects: Project[] = [
 	{
+		name: "Wedding Website",
+		summary: "I crafted an elegant wedding site, seamlessly blending style and functionality. Through coding, I created a delightful and user-friendly experience for couples and their guests. Designed for Mobile Screens",
+		url: "https://weddingsite-teal.vercel.app/",
+		tools: ["React", "Nextjs", "TypeScript", "Chakra-UI"],
+	},
+	{
 		name: "Feature-Rich Text Editor",
 		summary:
-			"Developed a text editor that offers a user-friendly interface and a wide range of functionalities for editing and manipulating text. The features implemented include: Text Editing, Formatting Options, File Management, and Encoding Support.",
+			"Developed a text editor that offers a user-friendly interface and a wide range of functionalities for editing and manipulating text. The features implemented include Text Editing, Formatting Options, File Management, and Encoding Support.",
 		github: "https://github.com/Meekunn/Text_Editor/",
 		tools: ["C++", "Qt Creator"],
 	},
