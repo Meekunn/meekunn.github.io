@@ -12,7 +12,7 @@ interface EmojiType {
 interface Project {
 	name: string;
 	summary: string;
-	github: string;
+	github?: string;
 	url?: string;
 	tools: string[];
 }
