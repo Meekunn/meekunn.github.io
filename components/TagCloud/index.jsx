@@ -16,6 +16,10 @@ const TextSphere = () => {
 				"Github",
 				"Firebase",
 				"Next.js",
+				"Vue.js",
+				"Flask",
+				"Python",
+				"Docker",
 				"Chakra-UI",
 				"C/C++",
 			];
