@@ -1,5 +1,12 @@
 export const projects: Project[] = [
 	{
+		name: "Face Recognition App",
+		summary: "A React and Flask-based attendance system using facial recognition for accurate, secure, and non-invasive tracking. Integrated MySQL and a custom-trained YOLOv10-N model for face detection.",
+		// url: "https://weddingsite-teal.vercel.app/",
+		github: "https://github.com/Meekunn/face_recognition_app",
+		tools: ["React", "TypeScript", "Chakra-UI", "Flask", "Conda", "MySQL", "DeepFace Framework", "YOLOv10-N model"],
+	},
+	{
 		name: "Wedding Website",
 		summary: "I crafted an elegant wedding site, seamlessly blending style and functionality. Through coding, I created a delightful and user-friendly experience for couples and their guests. Designed for Mobile Screens",
 		url: "https://weddingsite-teal.vercel.app/",
