@@ -13,7 +13,7 @@ const TextSphere = () => {
 				"TypeScript",
 				"ReactJS",
 				"Git",
-				"Github",
+				"GitHub",
 				"Firebase",
 				"Next.js",
 				"Vue.js",
@@ -24,7 +24,7 @@ const TextSphere = () => {
 				"C/C++",
 			];
 			const options = {
-				radius: 200,
+				radius: 250,
 				maxSpeed: "fast",
 				initSpeed: "fast",
 				useContainerInlineStyles: false,
