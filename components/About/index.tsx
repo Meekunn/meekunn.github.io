@@ -89,9 +89,16 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						Armed with a strong coding background and an unwavering spirit, I&apos;m confident in my
-						ability to contribute positively to any team. Let&apos;s come together and create
-						something truly extraordinary!
+						I expanded my technical expertise through internships at WeixelTech and Doprax, mastering tools and frameworks like Django, Docker, and Vue.js while discovering a deep passion for Artificial Intelligence and Computer Vision. Detail-oriented, organized, and driven by a commitment to growth, I thrive in collaborative environments and enjoy pushing boundaries to deliver innovative solutions.
+					</Text>
+					<Text
+						px={4}
+						py={1}
+						letterSpacing={"1px"}
+						fontSize={{ base: "sm", md: "md" }}
+						textIndent="1rem"
+					>
+						Armed with a strong coding background and an unwavering spirit, I'm confident in my ability to contribute positively to any team. I am eager to explore opportunities that blend my web development skills with my interest in AI and Computer Vision. Let’s come together and create something truly extraordinary!
 					</Text>
 					<Text
 						className={tangerine.className}
