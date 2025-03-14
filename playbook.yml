@@ -1,0 +1,67 @@
+---
+- name: Setup and Deploy Application
+  hosts: all
+  become: true
+  vars:
+    repo_url: "https://github.com/your-org/your-repo.git"
+    app_dir: "/var/www/your-app"
+    node_version: "18"
+    pm2_process_name: "your-app"
+
+  tasks:
+    - name: Ensure system packages are up-to-date
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install required dependencies
+      apt:
+        name:
+          - git
+          - curl
+          - build-essential
+        state: present
+
+    - name: Install Node.js
+      shell: |
+        curl -fsSL https://deb.nodesource.com/setup_{{ node_version }}.x | bash -
+        apt-get install -y nodejs
+      args:
+        executable: /bin/bash
+
+    - name: Clone the repository
+      git:
+        repo: "{{ repo_url }}"
+        dest: "{{ app_dir }}"
+        version: main
+        force: yes
+
+    - name: Install dependencies
+      command: npm install
+      args:
+        chdir: "{{ app_dir }}"
+
+    - name: Build the application
+      command: npm run build
+      args:
+        chdir: "{{ app_dir }}"
+
+    - name: Install PM2 globally
+      npm:
+        name: pm2
+        global: yes
+
+    - name: Start the application with PM2
+      command: pm2 start npm --name "{{ pm2_process_name }}" -- start
+      args:
+        chdir: "{{ app_dir }}"
+
+    - name: Save PM2 process list
+      command: pm2 save
+
+    - name: Set PM2 to start on boot
+      command: pm2 startup systemd
+
+  handlers:
+    - name: Restart app
+      command: pm2 restart "{{ pm2_process_name }}"
