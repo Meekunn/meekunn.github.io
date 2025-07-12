@@ -1,5 +1,12 @@
 export const projects: Project[] = [
 	{
+		name: "InnovaAI Landing Page",
+		summary: "Pixel-perfect React/TypeScript landing page that recreates the InnovaAI Figma mock-up, showcasing meticulous attention to layout details and smooth micro-animations powered by the AOS library, all built with Chakra UI on Vite.",
+		url: "https://ai-solutions-landing-page.vercel.app/",
+		github: "https://github.com/Meekunn/AI_Solutions_LandingPage",
+		tools: ["React", "TypeScript", "Chakra-UI", "Vite", "AOS Library"],
+	},
+	{
 		name: "Face Recognition App",
 		summary: "A React and Flask-based attendance system using facial recognition for accurate, secure, and non-invasive tracking. Integrated MySQL and a custom-trained YOLOv10-N model for face detection.",
 		// url: "https://weddingsite-teal.vercel.app/",
