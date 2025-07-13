@@ -67,9 +67,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
 
       - name: Upload artifact manually using v4
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
-          name: github-pages
+          # name: github-pages
           path: ./out
 
   deploy:
