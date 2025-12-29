@@ -98,7 +98,7 @@ const HomeSection = () => {
 							Ayomikun,
 						</Box>
 					</Heading>
-					<Heading
+					{/* <Heading
 						ref={ref}
 						as="h1"
 						pl={2}
@@ -117,7 +117,7 @@ const HomeSection = () => {
 								{letter === " " ? "\u00A0" : letter}
 							</BouncyTextAnim>
 						))}
-					</Heading>
+					</Heading> */}
 					<Text
 						className={tangerine.className}
 						fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "1.65rem" }}
@@ -138,8 +138,11 @@ const HomeSection = () => {
 								strings: [
 									"Translating Design into Functionality",
 									"Bringing Designs to Life Through Code",
-									"Transforming Ideas into User Experiences",
+								 	"Transforming Ideas into Interactive Experiences",
+								    "From Code to Cutting-Edge Applications"
 									"Turning Imagination into Interactive Reality",
+									"Bridging Research and Real-World Applications",
+								  	"Turning Data into Actionable Insights",
 								],
 								autoStart: true,
 								loop: true,
