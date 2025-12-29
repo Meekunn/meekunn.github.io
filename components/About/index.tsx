@@ -66,7 +66,7 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						Hi there! I'm Orofin Adedamola, a frontend developer and AI/CV enthusiast with a passion for creating interactive and intelligent applications. Currently at Doprax, I focus on building and optimizing cloud-based developer tools and dashboards, simplifying complex workflows and improving user experiences while gaining hands-on exposure to full-stack workflows, deployment pipelines, and cloud architectures.
+						Hi there! I&apos;m Orofin Adedamola, a frontend developer and AI/CV enthusiast with a passion for creating interactive and intelligent applications. Currently at Doprax, I focus on building and optimizing cloud-based developer tools and dashboards, simplifying complex workflows and improving user experiences while gaining hands-on exposure to full-stack workflows, deployment pipelines, and cloud architectures.
 					</Text>
 					<Text
 						px={4}
@@ -77,15 +77,7 @@ const About = () => {
 					>
 						Beyond web development, I have explored applied AI and computer vision through projects such as a real-time Face Recognition App, demonstrating my ability to connect research with practical solutions. My curiosity and dedication have been recognized academically, earning me the title of Best Female Graduating Student in the School of Engineering.
 					</Text>
-					<Text
-						px={4}
-						py={1}
-						letterSpacing={"1px"}
-						fontSize={{ base: "sm", md: "md" }}
-						textIndent="1rem"
-					>
-						I expanded my technical expertise through internships at WeixelTech and Doprax, mastering tools and frameworks like Django, Docker, and Vue.js while discovering a deep passion for Artificial Intelligence and Computer Vision. Detail-oriented, organized, and driven by a commitment to growth, I thrive in collaborative environments and enjoy pushing boundaries to deliver innovative solutions.
-					</Text>
+	
 					<Text
 						px={4}
 						py={1}
