@@ -66,9 +66,7 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						Hi there! I&apos;m Mikun, a web enthusiast known for infusing a touch of magic into
-						code. My passion lies in building exceptional applications, and I&apos;m eager to
-						collaborate with brilliant minds in the field to foster my continual growth.
+						Hi there! I'm Orofin Adedamola, a frontend developer and AI/CV enthusiast with a passion for creating interactive and intelligent applications. Currently at Doprax, I focus on building and optimizing cloud-based developer tools and dashboards, simplifying complex workflows and improving user experiences while gaining hands-on exposure to full-stack workflows, deployment pipelines, and cloud architectures.
 					</Text>
 					<Text
 						px={4}
@@ -77,10 +75,7 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						In the dynamic world of web development, I firmly believe that adaptability is the
-						secret to staying ahead. I&apos;m a self-motivated dynamo, always on the lookout to
-						learn new technologies and embrace evolving trends. Thriving on challenges, I actively
-						seek opportunities to broaden my expertise.
+						Beyond web development, I have explored applied AI and computer vision through projects such as a real-time Face Recognition App, demonstrating my ability to connect research with practical solutions. My curiosity and dedication have been recognized academically, earning me the title of Best Female Graduating Student in the School of Engineering.
 					</Text>
 					<Text
 						px={4}
@@ -98,7 +93,7 @@ const About = () => {
 						fontSize={{ base: "sm", md: "md" }}
 						textIndent="1rem"
 					>
-						Armed with a strong coding background and an unwavering spirit, I&apos;m confident in my ability to contribute positively to any team. I am eager to explore opportunities that blend my web development skills with my interest in AI and Computer Vision. Let&apos;s come together and create something truly extraordinary!
+						I am detail-oriented, collaborative, and highly motivated, thriving at the intersection of software development and AI research. I continuously seek opportunities to learn, innovate, and create solutions that have a meaningful impact.
 					</Text>
 					<Text
 						className={tangerine.className}
@@ -133,6 +128,12 @@ const About = () => {
 							// onClickOptions={{ passive: true }}
 						>
 							{[
+								"Python",
+							"Pytorch",
+							"Numpy",
+							"OpenCV",
+							"Tailwind",
+							"Vue.JS",
 								"Chakra-UI",
 								"HTML",
 								"TypeScript",
