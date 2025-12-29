@@ -139,7 +139,7 @@ const HomeSection = () => {
 									"Translating Design into Functionality",
 									"Bringing Designs to Life Through Code",
 								 	"Transforming Ideas into Interactive Experiences",
-								    "From Code to Cutting-Edge Applications"
+								    "From Code to Cutting-Edge Applications",
 									"Turning Imagination into Interactive Reality",
 									"Bridging Research and Real-World Applications",
 								  	"Turning Data into Actionable Insights",
