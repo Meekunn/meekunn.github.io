@@ -121,11 +121,11 @@ const About = () => {
 						>
 							{[
 								"Python",
-							"Pytorch",
-							"Numpy",
-							"OpenCV",
-							"Tailwind",
-							"Vue.JS",
+								"Pytorch",
+								"Numpy",
+								"OpenCV",
+								"Tailwind",
+								"Vue.JS",
 								"Chakra-UI",
 								"HTML",
 								"TypeScript",
